@@ -35,12 +35,12 @@ public class DietRestController {
 	
 	
 	@RequestMapping("/dietOCR")
-	public NutriFactVO dietOCR(MultipartHttpServletRequest request1, @RequestParam("uploadFile") MultipartFile file) {
+	public NutriFactVO dietOCR(MultipartHttpServletRequest request, @RequestParam("uploadFile") MultipartFile file) {
 		/* String result = ""; */
 		NutriFactVO nfvo = new NutriFactVO();		
 		
 		  try {
-			  String uploadPath = request1.getSession().getServletContext().getRealPath("/fileresources/");
+			  String uploadPath = request.getSession().getServletContext().getRealPath("/fileresources/");
 					  /*"c:/ai/";*/
 			  
 			  String originalFileName = file.getOriginalFilename();  
