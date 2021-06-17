@@ -42,7 +42,7 @@ public class DietRestController {
 		  try {
 			  String uploadPath = request1.getSession().getServletContext().getRealPath("/fileresources/");
 					  /*"c:/ai/";*/
-			  System.out.println(uploadPath);
+			  
 			  String originalFileName = file.getOriginalFilename();  
 			  
 			  String filePathName = uploadPath + originalFileName;
@@ -166,12 +166,6 @@ public class DietRestController {
 		
 		return foodList;
 	}
-	/*
-	 * public String getUploadPath(MultipartHttpServletRequest request) { String
-	 * uploadPath =
-	 * request.getSession().getServletContext().getRealPath("/fileresources/");
-	 * return uploadPath; }
-	 */
 	
 	
 	
